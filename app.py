@@ -7,7 +7,10 @@
 """
 import click
 from flask import Flask
+import logging
 
+
+logging
 app = Flask(__name__)
 
 
