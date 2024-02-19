@@ -17,7 +17,7 @@ app = Flask(__name__)
 # the minimal Flask application
 @app.route('/')
 def index():
-    app.logger.info('<h1>Hello, World!</h1>')
+    app.logger.error('<h1>Hello, World!</h1>')
     return '<h1>Hello, World!</h1>'
 
 
@@ -25,7 +25,7 @@ def index():
 @app.route('/hi')
 @app.route('/hello')
 def say_hello():
-    app.logger.info('<h1>Hello, Flask!</h1>')
+    app.logger.error('<h1>Hello, Flask!</h1>')
     return '<h1>Hello, Flask!</h1>'
 
 
@@ -33,7 +33,7 @@ def say_hello():
 @app.route('/greet', defaults={'name': 'Programmer'})
 @app.route('/greet/<name>')
 def greet(name):
-    app.logger.info('<h1>Hello, %s!</h1>', name)
+    app.logger.error('<h1>Hello, %s!</h1>', name)
     return '<h1>Hello, %s!</h1>' % name
 
 
